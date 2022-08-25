@@ -19,19 +19,15 @@ class MainActivity : AppCompatActivity() {
         binding =  ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
         Log.d("INFO", "Cliquei")
 
-        binding.btnSalvaUsuario.setOnClickListener {view ->
-            cliqueiAqui(view)
-        }
+
 
 
 
     }
-    fun cliqueiAqui( view: View){
-        Toast.makeText(view.context, "You clicked me.", Toast.LENGTH_SHORT).show()
-        Log.d("INFO", "Cliquei")
-    }
+
     override fun onStart() {
         super.onStart()
         Log.d(TAG , "Entrou onStart")
