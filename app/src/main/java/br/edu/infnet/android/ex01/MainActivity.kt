@@ -1,19 +1,23 @@
 package br.edu.infnet.android.ex01
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R.string
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import br.edu.infnet.android.ex01.databinding.ActivityMainBinding
 import br.edu.infnet.android.ex01.model.Aluno
-import com.google.android.material.snackbar.Snackbar
+import br.edu.infnet.android.ex01.model.Turma
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 
 class MainActivity : AppCompatActivity() {
     val TAG = "QUEM VOTEI"
     val botao = "CADASTRAR"
-    val alunos = mutableListOf<Aluno>()
+    var turma = Turma()
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,13 +41,13 @@ class MainActivity : AppCompatActivity() {
     }
     fun cliqueiAqui( view: View){
         binding.btnSalvaUsuario.setText("Salvo")
-        alunos.add(Aluno(
+        turma.alunos.add(Aluno(
             binding.textNome.text.toString(),
             binding.notaUm.text.toString().toDouble(),
             binding.notaDois.text.toString().toDouble()
         ))
         Toast.makeText(view.context, "You clicked me.", Toast.LENGTH_SHORT).show()
-        Log.d("TOTAL", "TOTAL DE ALUNOS : ${alunos.size}")
+        Log.d("TOTAL", "TOTAL DE ALUNOS : ${turma.alunos.size}")
     }
     override fun onStart() {
         super.onStart()
@@ -68,5 +72,16 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         Log.d(TAG , "Entrou onDestroy")
         super.onDestroy()
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        // put string value
+       outState.putString("alunos", Json.encodeToString(turma))
+        super.onSaveInstanceState(outState)
+    }
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        // get values from saved state
+        val oldAlunos = savedInstanceState.getString("alunos")
+        turma = oldAlunos?.let { Json.decodeFromString(it) }!!
+        super.onRestoreInstanceState(savedInstanceState)
     }
 }
