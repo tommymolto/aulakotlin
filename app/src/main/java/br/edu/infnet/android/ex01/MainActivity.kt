@@ -1,5 +1,6 @@
 package br.edu.infnet.android.ex01
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -38,8 +39,18 @@ class MainActivity : AppCompatActivity() {
         binding.btnSalvaUsuario.setOnClickListener {
             view -> salvarUsuario(view)
         }
+        binding.btnListaAlunos.setOnClickListener {
+                _ -> goToListaAlunos()
+        }
         Log.d("INFO", "Cliquei")
 
+    }
+    fun goToListaAlunos(){
+        val profileIntent = Intent(this,
+            ListaAlunosActivity::class.java)
+        profileIntent.putExtra("turma", Json.encodeToString(turma))
+
+        startActivity(profileIntent)
     }
     fun salvarUsuario( view: View){
         var novoAluno = Aluno(
