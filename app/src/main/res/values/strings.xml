@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Ex01</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="faq_fragment_titulo">Faq</string>
+    <string name="faq_fragment_titulo_pagina">Faq</string>
+    <string name="faq_fragment_titulo_texto">Pagina criada para o curso EDC-L + EDS-L | C1 | N2 | GRLEDC01C1-N2-L1 da Infnet</string>
+    <string name="faq_fragment_titulo_copyright">Infnet - 2022</string>
 </resources>
