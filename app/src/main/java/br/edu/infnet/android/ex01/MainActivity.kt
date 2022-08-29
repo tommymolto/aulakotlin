@@ -35,6 +35,24 @@ class MainActivity : AppCompatActivity() {
              }
 
         }
+        binding.notaUm.setOnFocusChangeListener {
+                _ , estaFocado ->
+            if(estaFocado){
+                binding.notaUm.setText("")
+            }else{
+                // binding.textNome.setText("To preenchido, gente")
+            }
+
+        }
+        binding.notaDois.setOnFocusChangeListener {
+                _ , estaFocado ->
+            if(estaFocado){
+                binding.notaDois.setText("")
+            }else{
+                // binding.textNome.setText("To preenchido, gente")
+            }
+
+        }
 
         binding.btnSalvaUsuario.setOnClickListener {
             view -> salvarUsuario(view)
