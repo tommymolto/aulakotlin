@@ -82,6 +82,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Salvar" />
+
+        <Button
+            android:id="@+id/navegaParaListaUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_lista_usuarios" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ex01</string>
+    <string name="btn_lista_usuarios">Listar Usuarios</string>
 </resources>

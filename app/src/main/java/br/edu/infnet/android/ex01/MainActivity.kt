@@ -1,5 +1,6 @@
 package br.edu.infnet.android.ex01
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,19 +30,29 @@ class MainActivity : AppCompatActivity() {
             _ , estaFocado ->
              if(estaFocado){
                  binding.textNome.setText("")
-             }else{
-                // binding.textNome.setText("To preenchido, gente")
              }
-
         }
+
 
         binding.btnSalvaUsuario.setOnClickListener {
             view -> salvarUsuario(view)
         }
-        Log.d("INFO", "Cliquei")
+
+        binding.navegaParaListaUsuario.setOnClickListener {
+            _ -> goToListaUsuario()
+        }
 
     }
+    fun goToListaUsuario(){
+        val listaUsuariosIntent = Intent(this, ListaAlunosActivity::class.java)
+        // listaUsuariosIntent.putExtra("parametro", "teste")
+        listaUsuariosIntent.putExtra("turma", Json.encodeToString(turma))
+        startActivity(listaUsuariosIntent)
+    }
     fun salvarUsuario( view: View){
+        var texto = "ppp"
+
+
         var novoAluno = Aluno(
             binding.textNome.text.toString(),
             binding.notaUm.text.toString().toDouble(),
@@ -51,6 +62,9 @@ class MainActivity : AppCompatActivity() {
         turma.alunos.add(novoAluno)
         Toast.makeText(view.context, "Aluno Salvo.", Toast.LENGTH_SHORT).show()
         Log.d("INFO", "Total alunos = ${ turma.alunos.size }")
+        binding.textNome.setText("")
+        binding.notaUm.setText("")
+        binding.notaDois.setText("")
     }
     override fun onStart() {
         super.onStart()
