@@ -27,8 +27,8 @@ class ListaAlunosActivity : AppCompatActivity() {
             listaAlunos += " ${ aluno.nome} \n"
         }
         Log.d( "listaAlunos", listaAlunos)
-        val x = findViewById<TextView>(R.id.tvAlunos)
-        x.text = listaAlunos
+        //val x = findViewById<TextView>(R.id.tvAlunos)
+        //x.text = listaAlunos
        // binding.textView5.setText(listaAlunos, TextView.BufferType.EDITABLE)
 
 

@@ -23,6 +23,7 @@ class AlunoFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var turma: Turma
+    private var indice = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -41,12 +42,45 @@ class AlunoFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_aluno, container, false)
     }
+    fun hasNext(){
+        if(indice < (turma.alunos.size -1)){
+            btProximo.visibility = View.VISIBLE
+        }else{
+            btProximo.visibility = View.INVISIBLE
+        }
+    }
+    fun hasPrevious(){
+        if(indice > 0){
+            btAnterior.visibility = View.VISIBLE
+        }else{
+            btAnterior.visibility = View.INVISIBLE
+        }
+    }
+    fun navegaAluno(){
 
+        txtNome.text = turma.alunos[indice].nome
+        txtNotaUm.text = turma.alunos[indice].notaUm.toString()
+        txtNotaDois.text = turma.alunos[indice].notaDois.toString()
+        hasNext()
+        hasPrevious()
+
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        txtNome.text = turma.alunos[0].nome
+        navegaAluno()
+        btAnterior.setOnClickListener {
+            _ ->
+            indice--
+            navegaAluno()
+        }
+        btProximo.setOnClickListener {
+                _ ->
+            indice++
+            navegaAluno()
+        }
+        /*txtNome.text = turma.alunos[0].nome
         txtNotaUm.text = turma.alunos[0].notaUm.toString()
-        txtNotaDois.text = turma.alunos[0].notaDois.toString()
+        txtNotaDois.text = turma.alunos[0].notaDois.toString()*/
     }
     companion object {
         /**
