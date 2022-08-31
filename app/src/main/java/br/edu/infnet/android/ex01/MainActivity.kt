@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import br.edu.infnet.android.ex01.databinding.ActivityMainBinding
 import br.edu.infnet.android.ex01.model.Aluno
@@ -79,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         )
         turma.alunos.add(novoAluno)
         Toast.makeText(view.context, "Aluno Salvo.", Toast.LENGTH_SHORT).show()
+        findViewById<Button>(R.id.btnListaAlunos).visibility = View.VISIBLE
         Log.d("INFO", "Total alunos = ${ turma.alunos.size }")
     }
     override fun onStart() {
