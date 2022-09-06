@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_aluno.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_aluno2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_cadastro_aluno.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_faq.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_item_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.1" />

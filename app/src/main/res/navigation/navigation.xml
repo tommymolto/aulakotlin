@@ -3,15 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/faqFragment">
+    app:startDestination="@id/CadastroAlunoFragmentDest">
     <fragment
-        android:id="@+id/faqFragment"
-        android:name="br.edu.infnet.android.ex01.FaqFragment"
+        android:id="@+id/FaqFragmentDest"
+        android:name="br.edu.infnet.android.ex01.fragment.FaqFragment"
         android:label="fragment_faq"
-        tools:layout="@layout/fragment_faq" />
+        tools:layout="@layout/fragment_faq" >
+        <action
+            android:id="@+id/action_FaqFragment_to_AlunoFragment"
+            app:destination="@id/AlunoFragmentDest" />
+        <action
+            android:id="@+id/action_FaqFragment_to_cadastroAlunoFragment"
+            app:destination="@id/CadastroAlunoFragmentDest" />
+    </fragment>
     <fragment
-        android:id="@+id/alunoFragment"
-        android:name="br.edu.infnet.android.ex01.AlunoFragment"
+        android:id="@+id/AlunoFragmentDest"
+        android:name="br.edu.infnet.android.ex01.fragment.AlunoFragment"
         android:label="fragment_aluno"
-        tools:layout="@layout/fragment_aluno" />
+        tools:layout="@layout/fragment_aluno" >
+        <action
+            android:id="@+id/action_AlunoFragment_to_cadastroAlunoFragment"
+            app:destination="@id/CadastroAlunoFragmentDest" />
+    </fragment>
+    <fragment
+        android:id="@+id/CadastroAlunoFragmentDest"
+        android:name="br.edu.infnet.android.ex01.fragment.CadastroAlunoFragment"
+        android:label="fragment_cadastro_aluno"
+        tools:layout="@layout/fragment_cadastro_aluno" >
+        <action
+            android:id="@+id/action_cadastroAlunoFragment_to_AlunoFragment"
+            app:destination="@id/AlunoFragmentDest"
+            app:popUpTo="@id/AlunoFragmentDest" />
+        <action
+            android:id="@+id/action_cadastroAlunoFragment_to_FaqFragment"
+            app:destination="@id/FaqFragmentDest" />
+    </fragment>
 </navigation>
