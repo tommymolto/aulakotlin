@@ -1,6 +1,7 @@
 package br.edu.infnet.android.ex01.fragment
 
 import android.content.Intent
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -65,12 +66,20 @@ class AlunoFragment : Fragment() {
         }
     }
     fun navegaAluno(){
+        if(turma.alunos?.isEmpty() == true) {
+            tvSemAlunos.visibility = View.VISIBLE
+            llAluno.visibility = View.INVISIBLE
+        }else{
 
-        txtNome.text = turma.alunos[indice].nome
-        txtNotaUm.text = turma.alunos[indice].notaUm.toString()
-        txtNotaDois.text = turma.alunos[indice].notaDois.toString()
-        hasNext()
-        hasPrevious()
+            llAluno.visibility = View.VISIBLE
+            tvSemAlunos.visibility = View.INVISIBLE
+            txtNome.text = turma.alunos[indice].nome
+            txtNotaUm.text = turma.alunos[indice].notaUm.toString()
+            txtNotaDois.text = turma.alunos[indice].notaDois.toString()
+            hasNext()
+            hasPrevious()
+        }
+
 
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -6,10 +6,19 @@
     tools:context=".AlunoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvSemAlunos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="SEM ALUNOS CADASTRADOS"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/llAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/txtNome"
@@ -48,6 +57,7 @@
                 android:layout_weight="1"
                 android:text="Proximo" />
         </LinearLayout>
+
     </LinearLayout>
 
 </FrameLayout>

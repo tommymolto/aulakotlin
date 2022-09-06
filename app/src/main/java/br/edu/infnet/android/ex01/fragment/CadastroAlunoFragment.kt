@@ -64,7 +64,7 @@ class CadastroAlunoFragment : Fragment() {
         profileIntent.putExtra("turma", Json.encodeToString(turma))
 
         startActivity(profileIntent)*/
-        findNavController().navigate(R.id.AlunoFragmentDest)
+        findNavController().navigate(R.id.Listar)
     }
     fun salvarUsuario( view: View){
         var novoAluno = Aluno(
