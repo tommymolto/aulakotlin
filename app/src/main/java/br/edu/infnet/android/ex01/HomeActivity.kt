@@ -30,7 +30,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Set up Action Bar
         val navController = host.navController
-        navController.addOnDestinationChangedListener { _, destination, _ ->
+        /*navController.addOnDestinationChangedListener { _, destination, _ ->
             val dest: String = try {
                 resources.getResourceName(destination.id)
             } catch (e: Resources.NotFoundException) {
@@ -40,11 +40,11 @@ class HomeActivity : AppCompatActivity() {
             Toast.makeText(this@HomeActivity, "Navigated to $dest",
                 Toast.LENGTH_SHORT).show()
             Log.d("NavigationActivity", "Navigated to $dest")
-        }
+        }*/
         configurarNavegacao(navController)
     }
     private fun configurarNavegacao(navController: NavController){
-        Log.e("INFO", "CONFOIGUREI")
+        Log.e("INFO", "CONFIGUREI")
         val bottomNav = findViewById<BottomNavigationView>(R.id.navbar)
         bottomNav?.setupWithNavController(navController)
     }

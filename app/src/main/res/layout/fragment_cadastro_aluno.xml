@@ -83,12 +83,6 @@
             android:layout_height="wrap_content"
             android:text="Salvar" />
 
-        <Button
-            android:id="@+id/btnListaAlunos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lista Alunos"
-            android:visibility="invisible" />
     </LinearLayout>
 
 </FrameLayout>
