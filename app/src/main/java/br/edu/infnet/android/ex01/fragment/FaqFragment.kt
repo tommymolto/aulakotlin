@@ -1,12 +1,13 @@
-package br.edu.infnet.android.ex01
+package br.edu.infnet.android.ex01.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.edu.infnet.android.ex01.R
 import br.edu.infnet.android.ex01.dados.duvidas
-import kotlinx.android.synthetic.main.fragment_faq.*
+import kotlinx.android.synthetic.main.fragment_faq_aluno.*
 
 
 /**
@@ -22,7 +23,7 @@ class FaqFragment : Fragment() {
             savedInstanceState: Bundle?
         ): View? {
             // Infla o layout para este fragmento
-            return inflater.inflate(R.layout.fragment_faq, container, false)
+            return inflater.inflate(R.layout.fragment_faq_aluno, container, false)
         }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
