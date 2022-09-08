@@ -1,20 +1,24 @@
 package br.edu.infnet.android.ex01.adapter
 
+import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.android.ex01.R
 import br.edu.infnet.android.ex01.model.Aluno
 
-class ListaAlunoAdapter:
+class ListaAlunoAdapter(var listaAlunos: List<Aluno>  ):
     RecyclerView.Adapter<ListaAlunoAdapter.ListaAlunoViewholder>() {
-    val listaAlunos: List<Aluno> = listOf(
+    /*var listaAlunos = mutableListOf(
         Aluno("x",5.0,6.0),
         Aluno("x1",7.0,6.0),
      Aluno("x2",9.0,6.0)
-    )
+    )*/
+
     class ListaAlunoViewholder(itemView: View):
         RecyclerView.ViewHolder(itemView)
         {
@@ -30,6 +34,8 @@ class ListaAlunoAdapter:
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaAlunoViewholder {
+        Log.d("INFO", "1-list size= ${ listaAlunos.size}")
+
         val card = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.aluno_card, parent, false)
@@ -43,6 +49,15 @@ class ListaAlunoAdapter:
     }
 
     override fun getItemCount(): Int {
+        Log.d("INFO", "list size= ${ listaAlunos.size}")
         return listaAlunos.size
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    fun mudarDados(_listAlunos: List<Aluno>){
+        // Modifica a lista de dados
+        Log.d("INFO", "MUDOU ${ _listAlunos.size}")
+        listaAlunos = _listAlunos
+        // Solicita que a RecyclerView seja redesenhada
+        notifyDataSetChanged()
     }
 }

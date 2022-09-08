@@ -63,6 +63,18 @@ class CadastroAlunoFragment : Fragment() {
     }
 
     fun salvarUsuario( view: View){
+        if(textNome.text.isBlank()){
+            textNome.error = "Adicione um nome"
+            return
+        }
+        if(notaUm.text.isBlank()){
+            notaUm.error = "Adicione uma note"
+            return
+        }
+        if(notaDois.text.isBlank()){
+            notaDois.error = "Adicione uma note"
+            return
+        }
         var novoAluno = Aluno(
             textNome.text.toString(),
             notaUm.text.toString().toDouble(),

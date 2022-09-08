@@ -33,7 +33,7 @@ class AlunoFragment : Fragment() {
 
     private  val turmaViewModel: TurmaViewModel by activityViewModels()
     //private lateinit var turma: Turma
-    private lateinit var alunos: List<Aluno>
+    private var alunos: List<Aluno> = mutableListOf<Aluno>()
     private var indice = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +55,11 @@ class AlunoFragment : Fragment() {
             Log.d("OBSERVE", it.size.toString())
             // Se o valor não for nulo, nem vazio ou espaços
             if(it != null && it.isNotEmpty()){
+                val adapter = lista_alunos.adapter
+
+                if (adapter is ListaAlunoAdapter){
+                    adapter.mudarDados(it)
+                }
                 // torna as Views visíveis
                 llAluno.visibility = View.VISIBLE
                 tvSemAlunos.visibility = View.INVISIBLE
@@ -83,7 +88,7 @@ class AlunoFragment : Fragment() {
     }
     fun navegaAluno(){
         //if(turma.alunos?.isEmpty() == true) {
-        if(this::alunos.isInitialized) {
+        if(alunos.isNotEmpty()) {
             llAluno.visibility = View.VISIBLE
             tvSemAlunos.visibility = View.INVISIBLE
             txtNome.text = alunos[indice].nome
@@ -102,7 +107,7 @@ class AlunoFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        configurarRecyclerView()
+
 //        activity?.let {
 //            turmaViewModel = ViewModelProvider(this).get(TurmaViewModel::class.java)
 //        }
@@ -113,6 +118,7 @@ class AlunoFragment : Fragment() {
         turmaViewModel.addAluno(al3)
         turmaViewModel.addAluno(al2)
         Log.d("turmaViewModel", turmaViewModel.alunos.value.toString())
+        configurarRecyclerView(turmaViewModel.alunos.value!!)
         //subscribe()
         //navegaAluno()
         btAnterior.setOnClickListener {
@@ -126,13 +132,14 @@ class AlunoFragment : Fragment() {
             navegaAluno()
         }
     }
-    private fun configurarRecyclerView(){
+    private fun configurarRecyclerView(_listaAlunos: List<Aluno>){
         lista_alunos.layoutManager =
             LinearLayoutManager(activity)
         lista_alunos.addItemDecoration(
             DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
         )
-        lista_alunos.adapter = ListaAlunoAdapter()
+        Log.d("INFO", "instanciando adapter com ${ _listaAlunos.size} alunos")
+        lista_alunos.adapter = ListaAlunoAdapter(_listaAlunos)
     }
 
 }
