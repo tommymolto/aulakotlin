@@ -14,8 +14,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.edu.infnet.android.ex01.HomeActivity
 import br.edu.infnet.android.ex01.R
+import br.edu.infnet.android.ex01.adapter.ListaAlunoAdapter
 import br.edu.infnet.android.ex01.model.Aluno
 import br.edu.infnet.android.ex01.model.Turma
 import br.edu.infnet.android.ex01.viewmodel.TurmaViewModel
@@ -99,6 +102,7 @@ class AlunoFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        configurarRecyclerView()
 //        activity?.let {
 //            turmaViewModel = ViewModelProvider(this).get(TurmaViewModel::class.java)
 //        }
@@ -109,8 +113,8 @@ class AlunoFragment : Fragment() {
         turmaViewModel.addAluno(al3)
         turmaViewModel.addAluno(al2)
         Log.d("turmaViewModel", turmaViewModel.alunos.value.toString())
-        subscribe()
-        navegaAluno()
+        //subscribe()
+        //navegaAluno()
         btAnterior.setOnClickListener {
             _ ->
             indice--
@@ -122,6 +126,13 @@ class AlunoFragment : Fragment() {
             navegaAluno()
         }
     }
-
+    private fun configurarRecyclerView(){
+        lista_alunos.layoutManager =
+            LinearLayoutManager(activity)
+        lista_alunos.addItemDecoration(
+            DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
+        )
+        lista_alunos.adapter = ListaAlunoAdapter()
+    }
 
 }

@@ -9,12 +9,14 @@
         <entry key="app/src/main/res/layout/activity_item_detail.xml" value="0.13958333333333334" />
         <entry key="app/src/main/res/layout/activity_lista_alunos.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/aluno_card.xml" value="0.1015625" />
         <entry key="app/src/main/res/layout/fragment_aluno.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_aluno2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_cadastro_aluno.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_faq.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_item_detail.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.125" />
         <entry key="app/src/main/res/layout/item_list_content.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.1" />
       </map>
