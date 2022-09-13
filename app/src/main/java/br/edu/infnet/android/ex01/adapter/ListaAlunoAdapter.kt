@@ -6,19 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.android.ex01.R
+import br.edu.infnet.android.ex01.helper.ItemTouchHelperAdapter
 import br.edu.infnet.android.ex01.model.Aluno
+import java.util.*
 
-class ListaAlunoAdapter(var listaAlunos: List<Aluno>  ):
-    RecyclerView.Adapter<ListaAlunoAdapter.ListaAlunoViewholder>() {
+class ListaAlunoAdapter(var listaAlunos: MutableList<Aluno>  ) :
+    RecyclerView.Adapter<ListaAlunoAdapter.ListaAlunoViewholder>(), ItemTouchHelperAdapter {
     /*var listaAlunos = mutableListOf(
         Aluno("x",5.0,6.0),
         Aluno("x1",7.0,6.0),
      Aluno("x2",9.0,6.0)
     )*/
-
+    override fun onItemDismiss(position: Int) {
+        listaAlunos.removeAt(position)
+        notifyItemRemoved(position)
+    }
+    override fun onItemMove(fromPosition: Int, toPosition: Int): Unit {
+        if (fromPosition < toPosition) {
+            for (i in fromPosition until toPosition) {
+                Collections.swap(listaAlunos, i, i + 1)
+            }
+        } else {
+            for (i in fromPosition downTo toPosition + 1) {
+                Collections.swap(listaAlunos, i, i - 1)
+            }
+        }
+        notifyItemMoved(fromPosition, toPosition)
+        //return true
+    }
     class ListaAlunoViewholder(itemView: View):
         RecyclerView.ViewHolder(itemView)
         {
@@ -53,7 +70,7 @@ class ListaAlunoAdapter(var listaAlunos: List<Aluno>  ):
         return listaAlunos.size
     }
     @SuppressLint("NotifyDataSetChanged")
-    fun mudarDados(_listAlunos: List<Aluno>){
+    fun mudarDados(_listAlunos: MutableList<Aluno>){
         // Modifica a lista de dados
         Log.d("INFO", "MUDOU ${ _listAlunos.size}")
         listaAlunos = _listAlunos
