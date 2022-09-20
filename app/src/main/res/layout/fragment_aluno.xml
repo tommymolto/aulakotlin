@@ -13,51 +13,10 @@
         android:text="SEM ALUNOS CADASTRADOS"
         android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/llAluno"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_alunos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="visible">
-
-        <TextView
-            android:id="@+id/txtNome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment" />
-
-        <TextView
-            android:id="@+id/txtNotaUm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/txtNotaDois"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btAnterior"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Anterior" />
-
-            <Button
-                android:id="@+id/btProximo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Proximo" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:clipChildren="false" />
 
 </FrameLayout>

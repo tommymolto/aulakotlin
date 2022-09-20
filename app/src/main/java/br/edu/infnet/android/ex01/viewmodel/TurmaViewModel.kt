@@ -18,4 +18,7 @@ class TurmaViewModel: ViewModel() {
         Log.d("TOTAL", _alunos.value.toString())
 
     }
+    fun removeAluno(_aluno: Aluno): Unit{
+        _alunos.value = _alunos.value?.minus(_aluno).apply {  }
+    }
 }
