@@ -18,11 +18,11 @@
             android:layout_height="wrap_content"
             android:text="Descer" />
 
-        <ImageView
-            android:id="@+id/my_image"
+        <ProgressBar
+            android:id="@+id/MyprogressBar"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/myText"
@@ -30,12 +30,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
+            android:lines="5"
+            android:maxLines="5"
+            android:singleLine="false"
             android:text="Name" />
-
-        <ProgressBar
-            android:id="@+id/MyprogressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
