@@ -1,0 +1,27 @@
+
+pluginManagement {
+    ext.artifactoryUrl = 'http://artifactory.santanderbr.corp/artifactory/maven-public/'
+
+    repositories {
+        //gradlePluginPortal()
+        //google()
+        maven {
+            url "$artifactoryUrl"
+            allowInsecureProtocol true
+        }
+    }
+}
+dependencyResolutionManagement {
+    ext.artifactoryUrl = 'http://artifactory.santanderbr.corp/artifactory/maven-public/'
+
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        //google()
+        maven {
+            url "$artifactoryUrl"
+            allowInsecureProtocol true
+        }
+    }
+}
+rootProject.name = "Storage"
+include ':app'
