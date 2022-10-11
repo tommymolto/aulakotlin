@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import android.view.View
 import br.edu.infnet.android.myapplication.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStream
@@ -20,16 +24,75 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val tag: String = "ActivityAsyncTask"
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.CallBtn.setOnClickListener {
-            AsyncTaskExample(this).execute()
+            //AsyncTaskExample(this).execute()
+            salvaArquivoAsync()
         }
 
+    }
+    private fun salvaArquivoAsync() {
+        // restante do código
+        CoroutineScope(Dispatchers.IO).launch {
+            salvaArquivo()
+            withContext(Dispatchers.Main) {
+                //this@MainActivity.onBackPressed()
+            }
+        }
+    }
+    fun salvaArquivo(){
+        var result = ""
+        try {
+            val url = URL("https://reqres.in/api/users?page=2")
+            val httpURLConnection = url.openConnection() as HttpURLConnection
+
+            httpURLConnection.readTimeout = 80000
+            httpURLConnection.connectTimeout = 80000
+            httpURLConnection.doOutput = true
+            httpURLConnection.connect()
+
+            val responseCode: Int = httpURLConnection.responseCode
+            Log.d(this@MainActivity?.tag, "responseCode - $responseCode")
+
+            if (responseCode == 200 || responseCode == 201) {
+                val inStream: InputStream = httpURLConnection.inputStream
+                val isReader = InputStreamReader(inStream)
+                val bReader = BufferedReader(isReader)
+                var tempStr: String?
+
+                try {
+
+                    while (true) {
+                        tempStr = bReader.readLine()
+                        if (tempStr == null) {
+                            break
+                        }
+                        result += tempStr
+                    }
+                } catch (Ex: Exception) {
+                    Log.e(this@MainActivity.tag, "Error in convertToString " + Ex.printStackTrace())
+                }
+            }
+        } catch (ex: Exception) {
+            Log.d("", "Error in doInBackground " + ex.message)
+        }
+        //return result
+        this@MainActivity.binding.MyprogressBar.visibility = View.INVISIBLE
+        if (result == "") {
+            this@MainActivity.binding.myText.setText("Erro")
+        } else {
+            var parsedResult = ""
+//                var jsonObject: JSONObject? = JSONObject(result)
+//                jsonObject = jsonObject?.getJSONObject("data")
+//                parsedResult += "Code Name : " + (jsonObject?.get("code_name")) + "\n"
+//                parsedResult += "Version Number : " + (jsonObject?.get("version_number")) + "\n"
+//                parsedResult += "API Level : " + (jsonObject?.get("api_level"))
+            this@MainActivity.binding.myText.setText(result)
+        }
     }
     class AsyncTaskExample(private var activity: MainActivity) : AsyncTask<String, String, String>() {
 
