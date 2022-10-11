@@ -1,15 +1,25 @@
 pluginManagement {
+    ext.artifactoryUrl = 'http://artifactory.santanderbr.corp/artifactory/maven-public/'
+
     repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
+        //gradlePluginPortal()
+        //google()
+        maven {
+            url "$artifactoryUrl"
+            allowInsecureProtocol true
+        }
     }
 }
 dependencyResolutionManagement {
+    ext.artifactoryUrl = 'http://artifactory.santanderbr.corp/artifactory/maven-public/'
+
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        //google()
+        maven {
+            url "$artifactoryUrl"
+            allowInsecureProtocol true
+        }
     }
 }
 rootProject.name = "Modulo1"

@@ -1,6 +1,8 @@
 package com.example.modulo1.ui.login
 
 import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -15,6 +17,8 @@ import android.widget.Toast
 import com.example.modulo1.databinding.ActivityLoginBinding
 
 import com.example.modulo1.R
+import com.example.modulo1.ui.profile.ProfileActivity
+import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
 
@@ -23,7 +27,10 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val sharedPref = this.getSharedPreferences("moduloum", Context.MODE_PRIVATE)
+        if(sharedPref.getString("imagem", "erro") != "erro"){
+            redirecionaParaProfile()
+        }
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -57,12 +64,16 @@ class LoginActivity : AppCompatActivity() {
                 showLoginFailed(loginResult.error)
             }
             if (loginResult.success != null) {
-                updateUiWithUser(loginResult.success)
+                //updateUiWithUser(loginResult.success)
+                if(salvaUsuario()){
+                    redirecionaParaProfile()
+                }
+
             }
-            setResult(Activity.RESULT_OK)
+            //setResult(Activity.RESULT_OK)
 
             //Complete and destroy login activity once successful
-            finish()
+            //finish()
         })
 
         username.afterTextChanged {
@@ -111,6 +122,24 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+    private fun salvaUsuario(): Boolean{
+        try{
+            val sharedPref = this.getSharedPreferences("moduloum", Context.MODE_PRIVATE)
+            with (sharedPref?.edit()) {
+                this?.putString("imagem", "teste")
+                this?.commit()
+            }
+            return true
+        }catch (e: Exception) {
+            return false
+        }
+
+    }
+    private fun redirecionaParaProfile(){
+        val intent = Intent(this, ProfileActivity::class.java)
+       // intent.putExtra("keyIdentifier", value)
+        startActivity(intent)
     }
 }
 
