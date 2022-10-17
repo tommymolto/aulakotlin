@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_aluno_card.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/aluno_card.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_fragment_faq_aluno.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_faq_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_fragment_lista_aluno.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_lista_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_activity_aluno.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_activity_home.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_fragment_cadastro_aluno.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_cadastro_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_activity_main.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/navigation_navegacao.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/navigation/navegacao.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_fragment_aluno.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/xml_backup_rules.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/menu_bottom_menu.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/menu/bottom_menu.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "br.edu.infnet.android.ex01.app-merged_res-45:/layout_fragment_aluno.xml.flat",
+        "source": "br.edu.infnet.android.ex01.app-main-47:/layout/fragment_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_activity_lista_alunos.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_lista_alunos.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/layout_fragment_faq.xml.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_faq.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/mipmap-xxhdpi/ic_launcher.webp"
+    }
+]

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacao"
+    app:startDestination="@+id/Cadastrar">
+    <fragment
+        android:id="@+id/FAQ"
+        android:name="br.edu.infnet.android.ex01.fragment.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/Listar"
+        android:name="br.edu.infnet.android.ex01.fragment.AlunoFragment"
+        android:label="fragment_aluno"
+        tools:layout="@layout/fragment_aluno" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/Cadastrar"
+        android:name="br.edu.infnet.android.ex01.fragment.CadastroAlunoFragment"
+        android:label="fragment_cadastro_aluno"
+        tools:layout="@layout/fragment_cadastro_aluno" >
+
+    </fragment>
+</navigation>

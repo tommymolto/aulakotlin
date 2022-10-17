@@ -1,0 +1,48 @@
+br.edu.infnet.android.myapplication.app-navigation-ui-ktx-2.5.2-0 /Users/paulomarinho/.gradle/caches/transforms-3/022c1b21f652b14bb5e75a27a25777ee/transformed/navigation-ui-ktx-2.5.2/res
+br.edu.infnet.android.myapplication.app-savedstate-1.2.0-1 /Users/paulomarinho/.gradle/caches/transforms-3/02d9a1c992ba142a6f1c7f5d7ffca310/transformed/savedstate-1.2.0/res
+br.edu.infnet.android.myapplication.app-savedstate-ktx-1.2.0-2 /Users/paulomarinho/.gradle/caches/transforms-3/04895025fcff7b847a976160948aa35f/transformed/savedstate-ktx-1.2.0/res
+br.edu.infnet.android.myapplication.app-appcompat-resources-1.5.1-3 /Users/paulomarinho/.gradle/caches/transforms-3/04b99c2d3ee38714c14bf3d221b2a08b/transformed/appcompat-resources-1.5.1/res
+br.edu.infnet.android.myapplication.app-material-1.6.1-4 /Users/paulomarinho/.gradle/caches/transforms-3/0700c079a9361c9bc5e6404d34690c50/transformed/material-1.6.1/res
+br.edu.infnet.android.myapplication.app-emoji2-views-helper-1.2.0-5 /Users/paulomarinho/.gradle/caches/transforms-3/0b622ae0009252fd9de3ea6d232488c7/transformed/emoji2-views-helper-1.2.0/res
+br.edu.infnet.android.myapplication.app-lifecycle-livedata-core-2.5.1-6 /Users/paulomarinho/.gradle/caches/transforms-3/0ff8f254ca685ecf1cb4e6f520f40b73/transformed/lifecycle-livedata-core-2.5.1/res
+br.edu.infnet.android.myapplication.app-navigation-common-ktx-2.5.2-7 /Users/paulomarinho/.gradle/caches/transforms-3/2057bbb861103c319be754f347ef5953/transformed/navigation-common-ktx-2.5.2/res
+br.edu.infnet.android.myapplication.app-activity-ktx-1.5.1-8 /Users/paulomarinho/.gradle/caches/transforms-3/2bb25e9d755d06e55176ee313f4c0d85/transformed/activity-ktx-1.5.1/res
+br.edu.infnet.android.myapplication.app-lifecycle-livedata-core-ktx-2.5.1-9 /Users/paulomarinho/.gradle/caches/transforms-3/2e125ad05a44616f2deadbea97146ec6/transformed/lifecycle-livedata-core-ktx-2.5.1/res
+br.edu.infnet.android.myapplication.app-navigation-common-2.5.2-10 /Users/paulomarinho/.gradle/caches/transforms-3/2ee4e1f231f79787a0303e2637f5c69d/transformed/navigation-common-2.5.2/res
+br.edu.infnet.android.myapplication.app-navigation-runtime-2.5.2-11 /Users/paulomarinho/.gradle/caches/transforms-3/367d808ff9e2b2f8efbf72406ebda36e/transformed/navigation-runtime-2.5.2/res
+br.edu.infnet.android.myapplication.app-navigation-ui-2.5.2-12 /Users/paulomarinho/.gradle/caches/transforms-3/44e75603e6e17723bcf66d315357fc79/transformed/navigation-ui-2.5.2/res
+br.edu.infnet.android.myapplication.app-navigation-runtime-ktx-2.5.2-13 /Users/paulomarinho/.gradle/caches/transforms-3/45dbe670b6bb800078ee9f3aa85d423a/transformed/navigation-runtime-ktx-2.5.2/res
+br.edu.infnet.android.myapplication.app-transition-1.4.1-14 /Users/paulomarinho/.gradle/caches/transforms-3/46540cdaaf96706a34eff11b7aa197ca/transformed/transition-1.4.1/res
+br.edu.infnet.android.myapplication.app-recyclerview-1.1.0-15 /Users/paulomarinho/.gradle/caches/transforms-3/4b680873f5535aea704d3a34b63b6935/transformed/recyclerview-1.1.0/res
+br.edu.infnet.android.myapplication.app-viewpager2-1.0.0-16 /Users/paulomarinho/.gradle/caches/transforms-3/4bec0276ba6259360fdac8888ee312fa/transformed/viewpager2-1.0.0/res
+br.edu.infnet.android.myapplication.app-window-1.0.0-17 /Users/paulomarinho/.gradle/caches/transforms-3/59cc7bfaee96798b7702f2d6d4e8e0bd/transformed/window-1.0.0/res
+br.edu.infnet.android.myapplication.app-fragment-ktx-1.5.2-18 /Users/paulomarinho/.gradle/caches/transforms-3/638eab11ae75b8eeaeac454e91850571/transformed/fragment-ktx-1.5.2/res
+br.edu.infnet.android.myapplication.app-navigation-fragment-ktx-2.5.2-19 /Users/paulomarinho/.gradle/caches/transforms-3/667b7360bbd225ba80d9815352ac3a77/transformed/navigation-fragment-ktx-2.5.2/res
+br.edu.infnet.android.myapplication.app-appcompat-1.5.1-20 /Users/paulomarinho/.gradle/caches/transforms-3/685980b024686d78956b91eec9b43f3b/transformed/appcompat-1.5.1/res
+br.edu.infnet.android.myapplication.app-core-1.8.0-21 /Users/paulomarinho/.gradle/caches/transforms-3/6a19de105318aab1da00cfa3c60fb56e/transformed/core-1.8.0/res
+br.edu.infnet.android.myapplication.app-activity-1.5.1-22 /Users/paulomarinho/.gradle/caches/transforms-3/72aa18d267fcea65a67f1c67469f91b1/transformed/activity-1.5.1/res
+br.edu.infnet.android.myapplication.app-annotation-experimental-1.1.0-23 /Users/paulomarinho/.gradle/caches/transforms-3/760b9af4b43b4d512130ddd1633ee153/transformed/annotation-experimental-1.1.0/res
+br.edu.infnet.android.myapplication.app-lifecycle-viewmodel-2.5.1-24 /Users/paulomarinho/.gradle/caches/transforms-3/83a8f2ff4fefab06a91b8a5cb0437f5b/transformed/lifecycle-viewmodel-2.5.1/res
+br.edu.infnet.android.myapplication.app-emoji2-1.2.0-25 /Users/paulomarinho/.gradle/caches/transforms-3/848773e611bbde5d3ec0ec3e63d01c98/transformed/emoji2-1.2.0/res
+br.edu.infnet.android.myapplication.app-drawerlayout-1.1.1-26 /Users/paulomarinho/.gradle/caches/transforms-3/89f334ed0aaa1263b47c6d75629cdccc/transformed/drawerlayout-1.1.1/res
+br.edu.infnet.android.myapplication.app-constraintlayout-2.1.4-27 /Users/paulomarinho/.gradle/caches/transforms-3/9827ec6617366e82ed5e7c7a909d86e6/transformed/constraintlayout-2.1.4/res
+br.edu.infnet.android.myapplication.app-lifecycle-viewmodel-ktx-2.5.1-28 /Users/paulomarinho/.gradle/caches/transforms-3/986014835ec9efb8bc56e0c587b8eff1/transformed/lifecycle-viewmodel-ktx-2.5.1/res
+br.edu.infnet.android.myapplication.app-core-ktx-1.8.0-29 /Users/paulomarinho/.gradle/caches/transforms-3/9f2d8786483f16acab3469f1ecada2e8/transformed/core-ktx-1.8.0/res
+br.edu.infnet.android.myapplication.app-lifecycle-process-2.4.1-30 /Users/paulomarinho/.gradle/caches/transforms-3/a4f0fb44e9b56370f8c2ed23c9d5d030/transformed/lifecycle-process-2.4.1/res
+br.edu.infnet.android.myapplication.app-lifecycle-runtime-2.5.1-31 /Users/paulomarinho/.gradle/caches/transforms-3/b1625850bd12ed5a169353107cc1dd79/transformed/lifecycle-runtime-2.5.1/res
+br.edu.infnet.android.myapplication.app-navigation-fragment-2.5.2-32 /Users/paulomarinho/.gradle/caches/transforms-3/b8f7072fe15f8fedc2b1b486f368b8b4/transformed/navigation-fragment-2.5.2/res
+br.edu.infnet.android.myapplication.app-startup-runtime-1.1.1-33 /Users/paulomarinho/.gradle/caches/transforms-3/baef32cd3c953915a0114f73cc9cca3f/transformed/startup-runtime-1.1.1/res
+br.edu.infnet.android.myapplication.app-lifecycle-runtime-ktx-2.5.1-34 /Users/paulomarinho/.gradle/caches/transforms-3/c83d855210d59f801c8cc758cf406396/transformed/lifecycle-runtime-ktx-2.5.1/res
+br.edu.infnet.android.myapplication.app-fragment-1.5.2-35 /Users/paulomarinho/.gradle/caches/transforms-3/e2249fca1050e03554a32b4ceefb976d/transformed/fragment-1.5.2/res
+br.edu.infnet.android.myapplication.app-slidingpanelayout-1.2.0-36 /Users/paulomarinho/.gradle/caches/transforms-3/e7a70ac917b1060f9ab54d36598ddb2c/transformed/slidingpanelayout-1.2.0/res
+br.edu.infnet.android.myapplication.app-cardview-1.0.0-37 /Users/paulomarinho/.gradle/caches/transforms-3/ecb62397fcd2d0e31dd8cc20a358496e/transformed/cardview-1.0.0/res
+br.edu.infnet.android.myapplication.app-lifecycle-viewmodel-savedstate-2.5.1-38 /Users/paulomarinho/.gradle/caches/transforms-3/f1c05abca8b731045f6324e39a2dc706/transformed/lifecycle-viewmodel-savedstate-2.5.1/res
+br.edu.infnet.android.myapplication.app-coordinatorlayout-1.1.0-39 /Users/paulomarinho/.gradle/caches/transforms-3/ff339137cecee5be0e91e8f58664aa0c/transformed/coordinatorlayout-1.1.0/res
+br.edu.infnet.android.myapplication.app-pngs-40 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/build/generated/res/pngs/debug
+br.edu.infnet.android.myapplication.app-resValues-41 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/build/generated/res/resValues/debug
+br.edu.infnet.android.myapplication.app-rs-42 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/build/generated/res/rs/debug
+br.edu.infnet.android.myapplication.app-packageDebugResources-43 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+br.edu.infnet.android.myapplication.app-packageDebugResources-44 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+br.edu.infnet.android.myapplication.app-merged_res-45 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/build/intermediates/merged_res/debug
+br.edu.infnet.android.myapplication.app-debug-46 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/src/debug/res
+br.edu.infnet.android.myapplication.app-main-47 /Users/paulomarinho/git/aulakotlin/02-Desenvolvimento Kotlin/01-AsyncTask/app/src/main/res

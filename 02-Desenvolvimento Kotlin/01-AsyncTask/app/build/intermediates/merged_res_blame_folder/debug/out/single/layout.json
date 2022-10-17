@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-mergeDebugResources-44:/layout/fragment_second.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-main-47:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-mergeDebugResources-44:/layout/content_main.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-main-47:/layout/content_main.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-mergeDebugResources-44:/layout/fragment_first.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.4/br.edu.infnet.android.myapplication.app-main-47:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "br.edu.infnet.android.myapplication.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "br.edu.infnet.android.myapplication.app-main-47:/layout/activity_main.xml"
+    }
+]

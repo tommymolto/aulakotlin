@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/aluno_card.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/aluno_card.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/fragment_aluno.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/fragment_cadastro_aluno.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_cadastro_aluno.xml"
+    },
+    {
+        "merged": "br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/fragment_aluno.xml",
+        "source": "br.edu.infnet.android.ex01.app-main-47:/layout/fragment_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/activity_home.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/fragment_faq.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_faq.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/fragment_lista_aluno.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_lista_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/activity_aluno.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_aluno.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/activity_lista_alunos.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/activity_lista_alunos.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-mergeDebugResources-44:/layout/fragment_faq_aluno.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/br.edu.infnet.android.ex01.app-main-47:/layout/fragment_faq_aluno.xml"
+    }
+]
