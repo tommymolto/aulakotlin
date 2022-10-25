@@ -1,15 +1,19 @@
 [
     {
-        "merged": "com.example.storage.app-mergeDebugResources-46:/layout/fragment_dashboard.xml",
-        "source": "com.example.storage.app-main-49:/layout/fragment_dashboard.xml"
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-mergeDebugResources-46:/layout/fragment_dashboard.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-main-49:/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.storage.app-mergeDebugResources-46:/layout/fragment_home.xml",
-        "source": "com.example.storage.app-main-49:/layout/fragment_home.xml"
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-mergeDebugResources-46:/layout/fragment_notifications.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-main-49:/layout/fragment_notifications.xml"
     },
     {
-        "merged": "com.example.storage.app-mergeDebugResources-46:/layout/activity_main.xml",
-        "source": "com.example.storage.app-main-49:/layout/activity_main.xml"
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-mergeDebugResources-46:/layout/activity_main.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-main-49:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-mergeDebugResources-46:/layout/fragment_home.xml",
+        "source": "/Users/paulomarinho/.gradle/daemon/7.3.3/com.example.storage.app-main-49:/layout/fragment_home.xml"
     },
     {
         "merged": "com.example.storage.app-mergeDebugResources-46:/layout/fragment_notifications.xml",

@@ -27,9 +27,11 @@ id nav_view
 id navigation_dashboard
 id navigation_home
 id navigation_notifications
+id textView2
 id text_dashboard
 id text_home
 id text_notifications
+id txtConteudo
 id txtInputText
 id txtMultiline
 id txtSP

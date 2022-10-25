@@ -37,18 +37,27 @@ public final class FragmentNotificationsBinding implements ViewBinding {
   public final TextView textNotifications;
 
   @NonNull
+  public final TextView textView2;
+
+  @NonNull
+  public final TextView txtConteudo;
+
+  @NonNull
   public final EditText txtMultiline;
 
   private FragmentNotificationsBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button btnReadExternally, @NonNull Button btnReadLocally,
       @NonNull Button btnSaveExternally, @NonNull Button btnSaveLocally,
-      @NonNull TextView textNotifications, @NonNull EditText txtMultiline) {
+      @NonNull TextView textNotifications, @NonNull TextView textView2,
+      @NonNull TextView txtConteudo, @NonNull EditText txtMultiline) {
     this.rootView = rootView;
     this.btnReadExternally = btnReadExternally;
     this.btnReadLocally = btnReadLocally;
     this.btnSaveExternally = btnSaveExternally;
     this.btnSaveLocally = btnSaveLocally;
     this.textNotifications = textNotifications;
+    this.textView2 = textView2;
+    this.txtConteudo = txtConteudo;
     this.txtMultiline = txtMultiline;
   }
 
@@ -109,6 +118,18 @@ public final class FragmentNotificationsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
+      id = R.id.txtConteudo;
+      TextView txtConteudo = ViewBindings.findChildViewById(rootView, id);
+      if (txtConteudo == null) {
+        break missingId;
+      }
+
       id = R.id.txtMultiline;
       EditText txtMultiline = ViewBindings.findChildViewById(rootView, id);
       if (txtMultiline == null) {
@@ -116,7 +137,8 @@ public final class FragmentNotificationsBinding implements ViewBinding {
       }
 
       return new FragmentNotificationsBinding((ConstraintLayout) rootView, btnReadExternally,
-          btnReadLocally, btnSaveExternally, btnSaveLocally, textNotifications, txtMultiline);
+          btnReadLocally, btnSaveExternally, btnSaveLocally, textNotifications, textView2,
+          txtConteudo, txtMultiline);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

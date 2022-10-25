@@ -3021,6 +3021,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
 id text_dashboard
 id text_home
 id text_input_end_icon
@@ -3049,6 +3050,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtConteudo
 id txtInputText
 id txtMultiline
 id txtSP
