@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "602718471296",
+    "project_id": "fir-infnet",
+    "storage_bucket": "fir-infnet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602718471296:android:2aca6d55a73ca814395265",
+        "android_client_info": {
+          "package_name": "br.edu.infnet.android.firebaseinfnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602718471296-j5aoma9gv37n8sv5icddlho5cdj5pl4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9aW_MJRJI1P4kFkS028iStarRVKSgc2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602718471296-j5aoma9gv37n8sv5icddlho5cdj5pl4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
