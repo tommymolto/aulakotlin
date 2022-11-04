@@ -19,6 +19,12 @@
             android:inputType="text"
             android:hint="Entre com uma tarefa"
             android:text="@={viewModel.newTaskName}" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/save_button"
             android:layout_width="wrap_content"
