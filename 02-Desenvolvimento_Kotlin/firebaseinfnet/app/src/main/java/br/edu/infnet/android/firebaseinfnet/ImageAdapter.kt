@@ -1,18 +1,18 @@
-package com.androiddevs.firebasestorage
+package br.edu.infnet.android.firebaseinfnet
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
-import br.edu.infnet.android.firebaseinfnet.R
 import com.bumptech.glide.Glide
 
+typealias onItemClick = (filename: String)->Unit
 class ImageAdapter(
-    val urls: List<String>,
-    val context: Context
+    val urls: List<Map<String,String>>,
+    val context: Context,
+    val funcaoClick: (Map<String, String>) -> Unit
 ): RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
     inner class ImageViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -31,11 +31,11 @@ class ImageAdapter(
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
-        val url = urls[position]
+        val url = urls[position]["url"]
         Glide.with(holder.itemView).load(url).into(holder.itemView.findViewById(R.id.ivImage))
         holder.itemView.setOnClickListener {
             Toast.makeText(context, "Cliquei em ${urls[position]}", Toast.LENGTH_LONG).show()
-
+            funcaoClick(urls[position])
         }
 
     }

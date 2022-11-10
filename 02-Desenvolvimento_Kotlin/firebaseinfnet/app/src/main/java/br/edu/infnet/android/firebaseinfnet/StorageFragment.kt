@@ -1,9 +1,7 @@
 package br.edu.infnet.android.firebaseinfnet
 
 import android.app.Activity
-import android.app.Activity.RESULT_OK
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
@@ -13,25 +11,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.android.firebaseinfnet.databinding.FragmentStorageBinding
-import com.androiddevs.firebasestorage.ImageAdapter
+import com.bumptech.glide.Glide
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.ktx.component1
-import com.google.firebase.storage.ktx.component2
 import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import java.io.ByteArrayOutputStream
-import java.io.FileDescriptor
-import java.io.IOException
-import kotlin.random.Random
 
 private const val REQUEST_CODE_IMAGE_PICK = 0
 
@@ -52,7 +42,7 @@ class StorageFragment : Fragment() {
 
     //firabse
     val storageReference = FirebaseStorage.getInstance().reference
-
+    var imageUrls = mutableListOf<Map<String,String>>()
     var currentFile: Uri? = null
 
     val imageRef = Firebase.storage.reference
@@ -85,16 +75,16 @@ class StorageFragment : Fragment() {
         }
 
         binding.btnUploadImage.setOnClickListener {
-            uploadImageToStorage("myImage")
-            listFiles()
+            uploadImageToStorage("myImage").invokeOnCompletion {
+                listFiles()
+            }
+
         }
 
-        binding.btnDownloadImage.setOnClickListener {
-            downloadImage("myImage")
-        }
+
 
         binding.btnDeleteImage.setOnClickListener {
-            deleteImage("myImage")
+            deleteImage(currentFile.toString())
             listFiles()
 
         }
@@ -106,15 +96,18 @@ class StorageFragment : Fragment() {
     }
 
     private fun listFiles() = CoroutineScope(Dispatchers.IO).launch {
+        imageUrls = mutableListOf<Map<String,String>>()
         try {
             val images = imageRef.child("livros/").listAll().await()
-            val imageUrls = mutableListOf<String>()
+
             for(image in images.items) {
                 val url = image.downloadUrl.await()
-                imageUrls.add(url.toString())
+                val urlFriendly = image.name
+                imageUrls.add(mapOf( "url" to url.toString(), "name" to urlFriendly ))
             }
             withContext(Dispatchers.Main) {
-                val imageAdapter = ImageAdapter(imageUrls, requireContext())
+                val imageAdapter = ImageAdapter(imageUrls, requireContext() , ::setaImagem
+            )
                 binding.rvImages.apply {
                     adapter = imageAdapter
                     layoutManager = LinearLayoutManager(requireContext())
@@ -129,6 +122,7 @@ class StorageFragment : Fragment() {
 
     private fun deleteImage(filename: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
+            Log.d("Info", "Deletando $filename")
             imageRef.child("livros/$filename").delete().await()
             withContext(Dispatchers.Main) {
                 Toast.makeText(requireContext(), "Successfully deleted image.",
@@ -155,14 +149,24 @@ class StorageFragment : Fragment() {
             }
         }
     }
+    private fun setaImagem(filename: Map<String, String>) : Unit {
+//        val maxDownloadSize = 5L * 1024 * 1024
+//        val bytes = imageRef.child("livros/$filename").getBytes(maxDownloadSize).await()
+//        val bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+        currentFile = Uri.parse(filename["name"])
+//        binding.ivImage.setImageBitmap(bmp)
+        Glide.with(requireActivity()).load(filename["url"]).into(binding.ivImage)
+    }
+
 
     private fun uploadImageToStorage(filename: String) = CoroutineScope(Dispatchers.IO).launch {
-        val file_name = "${(1..100000000)}_$filename"
+        val file_name = "${(1..100000000).random()}_$filename"
         try {
             currentFile?.let {
                 imageRef.child("livros/$file_name").putFile(it).await()
+                //imageUrls.add(mapOf( "url" to url.toString(), "name" to file_name ))
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(requireContext(), "Successfully uploaded image",
+                    Toast.makeText(requireContext(), "Successfully uploaded image $file_name",
                         Toast.LENGTH_LONG).show()
                 }
             }
