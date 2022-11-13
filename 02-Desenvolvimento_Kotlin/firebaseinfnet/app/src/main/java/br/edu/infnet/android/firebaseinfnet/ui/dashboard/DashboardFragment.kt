@@ -21,6 +21,7 @@ class DashboardFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    private var saidaBanco = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,6 +35,9 @@ class DashboardFragment : Fragment() {
         val root: View = binding.root
         binding.btnCadastrarMock.setOnClickListener {
             adicionaUsuariosMock()
+        }
+        binding.btnListar.setOnClickListener {
+            leDados()
         }
 
         return root
@@ -66,12 +70,15 @@ class DashboardFragment : Fragment() {
             }
     }
     fun leDados(){
+        saidaBanco=""
         db.collection("perfil")
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
+                    saidaBanco += "${document.id} => ${document.data} \r\n\r\n"
                     Log.d(ContentValues.TAG, "${document.id} => ${document.data}")
                 }
+                binding.textView.text = saidaBanco
             }
             .addOnFailureListener { exception ->
                 Log.w(ContentValues.TAG, "Error getting documents.", exception)
