@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".ui.home.HomeFragment">
 
     <ImageView
         android:id="@+id/ivImage"
@@ -20,8 +19,10 @@
         android:id="@+id/btnUploadImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="Upload Image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivImage"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,5 +44,4 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivImage" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
