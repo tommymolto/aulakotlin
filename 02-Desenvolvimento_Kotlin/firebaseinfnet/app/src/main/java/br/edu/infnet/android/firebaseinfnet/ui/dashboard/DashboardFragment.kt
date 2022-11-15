@@ -33,6 +33,9 @@ class DashboardFragment : Fragment() {
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.btnCadastrarNovoUsuario.setOnClickListener {
+            adicionaUsuarios()
+        }
         binding.btnCadastrarMock.setOnClickListener {
             adicionaUsuariosMock()
         }
@@ -41,6 +44,18 @@ class DashboardFragment : Fragment() {
         }
 
         return root
+    }
+    fun adicionaUsuarios() {
+        val newUser = hashMapOf(
+            "primeiro_nome" to binding.etPrimeiroNome.text.trim().toString(),
+            "ultimo_nome" to binding.etUltimoNome.text.trim().toString(),
+            "ano_nascimento" to Integer.parseInt(binding.etAnoNascimento.text.trim().toString())
+        )
+        db.collection("perfil")
+            .add(newUser)
+            .addOnSuccessListener { documentReference ->
+                Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
     }
     fun adicionaUsuariosMock(){
         val user1 = hashMapOf(
@@ -54,6 +69,7 @@ class DashboardFragment : Fragment() {
             .add(user1)
             .addOnSuccessListener { documentReference ->
                 Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                leDados()
             }
         val user2 = hashMapOf(
             "primeiro_nome" to "Ada",
