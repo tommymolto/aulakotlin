@@ -31,6 +31,7 @@ class DashboardFragment : Fragment() {
     private lateinit var adapter : PerfilAdapter
     private lateinit var perfis : MutableList<Perfil>
     private var statusEdit: Boolean = false
+    private lateinit var perfil: Perfil
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,7 +57,7 @@ class DashboardFragment : Fragment() {
                 adicionaUsuarios()
 
             }else{
-                updatePerfil()
+                updatePerfil(perfil)
             }
         }
         binding.btnCadastrarMock.setOnClickListener {
