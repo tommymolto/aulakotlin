@@ -1,6 +1,7 @@
 package br.edu.infnet.android.firebaseinfnet.ui.dashboard
 
 import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -30,8 +31,8 @@ class DashboardFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter : PerfilAdapter
     private lateinit var perfis : MutableList<Perfil>
-    private var statusEdit: Boolean = false
-    private lateinit var perfil: Perfil
+    private var _statusEdit: Boolean = false
+    private lateinit var _perfil: Perfil
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,25 +47,32 @@ class DashboardFragment : Fragment() {
         perfis = mutableListOf<Perfil>()
         recyclerView= binding.perfilRecycleView
         recyclerView.layoutManager  = LinearLayoutManager(activity)
-        adapter = PerfilAdapter(perfis)
+        adapter = PerfilAdapter(perfis, preparaAtualizacao, deletePerfil)
         recyclerView.adapter        = adapter
 
         recyclerView.addItemDecoration(
             DividerItemDecoration(activity, DividerItemDecoration.VERTICAL)
         )
         binding.btnCadastrarNovoUsuario.setOnClickListener {
-            if(!statusEdit){
+            if(!_statusEdit){
                 adicionaUsuarios()
 
             }else{
-                updatePerfil(perfil)
+                _perfil = Perfil(
+                    userId = _perfil.userId,
+                    primeiroNome = binding.etPrimeiroNome.text.trim().toString(),
+                    ultimoNome = binding.etUltimoNome.text.trim().toString(),
+                    anoNascimento = Integer.parseInt(binding.etAnoNascimento.text.trim().toString())
+                )
+                updatePerfil(_perfil)
             }
         }
         binding.btnCadastrarMock.setOnClickListener {
             adicionaUsuariosMock()
         }
         binding.btnListar.setOnClickListener {
-            leDados()
+            //leDados()
+            listDados()
         }
 
         return root
@@ -79,30 +87,41 @@ class DashboardFragment : Fragment() {
         db.collection("perfil")
             .add(newUser)
             .addOnSuccessListener { documentReference ->
-                perfis.add(
+                /*perfis.add(
                     Perfil(
                     userId = documentReference.id,
                         primeiroNome = binding.etPrimeiroNome.text.trim().toString(),
                         ultimoNome = binding.etUltimoNome.text.trim().toString(),
                         anoNascimento = Integer.parseInt(binding.etAnoNascimento.text.trim().toString())
                 ))
-                adapter.update(perfis)
+                adapter.update(perfis)*/
                 Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
             }
     }
-    fun deletePerfil(id: String){
-        db.collection("perfil").document(id).delete()
+    private var  preparaAtualizacao : (perfil: Perfil) -> Unit = {
+        _perfil = it
+        _statusEdit = true
+        binding.etPrimeiroNome.setText(_perfil.primeiroNome.toString())
+        binding.etUltimoNome.setText(_perfil.ultimoNome.toString())
+        binding.etAnoNascimento.setText(_perfil.anoNascimento.toString())
+    }
+    private var deletePerfil : (perfil: Perfil) -> Unit = {
+        db.collection("perfil").document(it.userId).delete()
     }
     fun updatePerfil(perfil: Perfil){
+        _statusEdit=false
         val docRef = db.collection("perfil").document(perfil.userId)
 
 // Remove the 'capital' field from the document
         val updates = hashMapOf<String, Any>(
-            "primeiro_nome" to "Ada",
+            "primeiro_nome" to perfil.primeiroNome,
+            "ultimo_nome" to perfil.ultimoNome,
+            "ano_nascimento" to perfil.anoNascimento!!,
         )
 
         docRef.update(updates).addOnCompleteListener {
-            leDados()
+            //leDados()
+            listDados()
         }
 
     }
@@ -118,7 +137,8 @@ class DashboardFragment : Fragment() {
             .add(user1)
             .addOnSuccessListener { documentReference ->
                 Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-                leDados()
+                //leDados()
+                listDados()
             }
         val user2 = hashMapOf(
             "primeiro_nome" to "Ada",
@@ -138,6 +158,7 @@ class DashboardFragment : Fragment() {
         saidaBanco=""
         db.collection("perfil")
             .get()
+
             .addOnSuccessListener { result ->
                 perfis = mutableListOf<Perfil>()
                 for (document in result) {
@@ -156,6 +177,35 @@ class DashboardFragment : Fragment() {
             }
             .addOnFailureListener { exception ->
                 Log.w(ContentValues.TAG, "Error getting documents.", exception)
+            }
+    }
+    fun listDados(){
+        saidaBanco=""
+        db.collection("perfil")
+            .addSnapshotListener { value, e ->
+                if (e != null) {
+                    Log.w(TAG, "Listen failed.", e)
+                    return@addSnapshotListener
+                }
+                perfis = mutableListOf<Perfil>()
+
+                //val cities = ArrayList<String>()
+                for (document in value!!) {
+                    /*doc.getString("primeiro_nome")?.let {
+                        cities.add(it)
+                    }*/
+                    saidaBanco += "${document.id} => ${document.data} \r\n\r\n"
+                    perfis.add(
+                        Perfil(
+                            userId = document.id,
+                            primeiroNome = document.data["primeiro_nome"].toString(),
+                            ultimoNome = document.data["ultimo_nome"].toString(),
+                            anoNascimento = Integer.parseInt(document.data["ano_nascimento"].toString())
+                        ))
+                }
+                adapter.update(perfis)
+                binding.textView.text = saidaBanco
+                Log.d(TAG, "$perfis")
             }
     }
 
