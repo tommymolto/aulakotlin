@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "534339815353",
+    "project_id": "firinf",
+    "storage_bucket": "firinf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534339815353:android:555c18a2389b35b34d5868",
+        "android_client_info": {
+          "package_name": "br.edu.infnet.android.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534339815353-2gsihvl9tmbfor1oudk2c4g3s3vlk7rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgzONwZQUYXfdwwM_NHGPDW6PNRusuGIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534339815353-2gsihvl9tmbfor1oudk2c4g3s3vlk7rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534339815353:android:22247a1c8925e35a4d5868",
+        "android_client_info": {
+          "package_name": "br.edu.infnet.android.firebaseinfnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534339815353-2gsihvl9tmbfor1oudk2c4g3s3vlk7rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgzONwZQUYXfdwwM_NHGPDW6PNRusuGIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534339815353-2gsihvl9tmbfor1oudk2c4g3s3vlk7rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
