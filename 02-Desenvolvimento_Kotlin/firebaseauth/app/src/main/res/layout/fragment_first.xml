@@ -51,6 +51,28 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPassword" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repita sua Senha:" />
+
+            <EditText
+                android:id="@+id/txtRepitaSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPassword" />
+
         </LinearLayout>
 
         <Button
@@ -60,16 +82,18 @@
             android:text="Login" />
 
         <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar" />
+
+        <Button
             android:id="@+id/btEsqueciSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Esqueci a Senha" />
 
-        <Button
-            android:id="@+id/btFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Entrar com Facebook" />
+
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/login_button"

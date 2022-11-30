@@ -1,10 +1,12 @@
 package br.edu.infnet.android.firebaseauth
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import br.edu.infnet.android.firebaseauth.databinding.FragmentSecondBinding
 
@@ -18,6 +20,7 @@ class SecondFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    val vm: UserViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,14 @@ class SecondFragment : Fragment() {
     ): View? {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        if(vm.id.isEmpty() && vm.email.isEmpty()){
+            findNavController().navigate(R.id.FirstFragment )
+        }
+        binding.txtUid.text = "token=${vm.id}"
+        binding.txtEmailAuth.text = "Email=${vm.email}"
+
+
+
         return binding.root
 
     }
